@@ -2,12 +2,15 @@
   "name": "vonix-portal",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://nicolassegatto.github.io/vonix/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.6.0",
@@ -48,6 +51,7 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-simple-import-sort": "^12.1.0",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.38",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwindcss": "^3.4.3",
