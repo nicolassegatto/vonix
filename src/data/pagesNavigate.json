@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "página inicial",
+        "to": "/"
+    },
+    {
+        "id": 2,
+        "name": "soluções",
+        "to": "/solutions"
+    },
+    {
+        "id": 3,
+        "name": "cases",
+        "to": "/cases"
+    },
+    {
+        "id": 4,
+        "name": "carreira",
+        "to": "/carrer"
+    },
+    {
+        "id": 5,
+        "name": "sobre nós",
+        "to": "/about"
+    }
+]
