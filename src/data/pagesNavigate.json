@@ -2,26 +2,26 @@
     {
         "id": 1,
         "name": "página inicial",
-        "to": "/"
+        "to": "/vonix/"
     },
     {
         "id": 2,
         "name": "soluções",
-        "to": "/solutions"
+        "to": "/vonix/solutions"
     },
     {
         "id": 3,
         "name": "cases",
-        "to": "/cases"
+        "to": "/vonix/cases"
     },
     {
         "id": 4,
         "name": "carreira",
-        "to": "/carrer"
+        "to": "/vonix/carrer"
     },
     {
         "id": 5,
         "name": "sobre nós",
-        "to": "/about"
+        "to": "/vonix/about"
     }
 ]

@@ -15,6 +15,7 @@ import { Contact } from "@/components/contact"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { IsMobileContext } from "@/context/isMobileContext"
+import { baseURL } from "@/viteBase"
 
 import { CustomersCarousel } from "./components/customersCarousel"
 import { HomeCard } from "./components/homeCard"
@@ -95,7 +96,7 @@ export function Home() {
               asChild
               className="rounded-full bg-vonix-blue-600 font-extrabold dark:bg-vonix-orange-400"
             >
-              <Link to={"/cases"}>Saiba mais</Link>
+              <Link to={`${baseURL}/cases`}>Saiba mais</Link>
             </Button>
           </div>
         </div>
@@ -104,7 +105,7 @@ export function Home() {
           className={`${isMobile ? "flex flex-col gap-12" : "grid grid-cols-2"} m-auto justify-center py-8 lg:w-[1024px]`}
         >
           <HomeCard
-            to="/solutions"
+            to={`${baseURL}/solutions`}
             button="Conheça nossas soluções"
             description={`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
               officia id possimus, dicta eveniet hic exercitationem quis et
@@ -115,7 +116,7 @@ export function Home() {
           />
 
           <HomeCard
-            to="/about"
+            to={`${baseURL}/about`}
             button="Sobre a Vonix"
             description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
               officia id possimus, dicta eveniet hic exercitationem quis et
@@ -134,11 +135,11 @@ export function Home() {
 
         <div className={`bg-vonix-blue-400 pb-[6rem] dark:bg-vonix-orange-600`}>
           <div
-            className={`m-auto flex ${isMobile && "flex-col p-8"} items-center lg:w-[1024px]`}
+            className={`m-auto  ${isMobile ? " flex flex-col p-8" : "grid grid-cols-2 px-4 py-8"} items-center  lg:w-[1024px]`}
           >
             <div className={`flex flex-col gap-8 `}>
               <div
-                className={`justify-center gap-2 ${isMobile ? "flex h-4" : "flex h-6"}`}
+                className={` gap-2 ${isMobile ? "flex h-4 justify-center" : "flex h-6 justify-start"}`}
               >
                 <img
                   src={vonix}
@@ -169,7 +170,7 @@ export function Home() {
                 className={`flex flex-col gap-4 ${isMobile && "items-center"}`}
               >
                 <h2
-                  className={`${isMobile ? "text-2xl" : "text-4xl"}  font-extrabold text-background`}
+                  className={`${isMobile ? "text-2xl" : "text-3xl"}  font-extrabold text-background`}
                 >
                   Provemos soluções de voz em nuvem, temos ferramentas de IA e
                   somos provedores oficiais da Meta Business API.
@@ -192,7 +193,7 @@ export function Home() {
         </div>
 
         <div
-          className={` ${isMobile ? "mb-[4rem] mt-[-12rem] w-full" : "mb-[6rem] mt-[-6rem]"} m-auto  flex lg:w-[1024px]`}
+          className={` ${isMobile ? "mb-[4rem] mt-[-12rem] w-full" : "mb-[6rem] mt-[-8rem]"} m-auto  flex lg:w-[1024px]`}
         >
           <Contact />
         </div>

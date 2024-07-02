@@ -5,33 +5,34 @@ import { AboutUs } from "@/pages/aboutUs"
 import { Carrer } from "@/pages/carrer"
 import { Cases } from "@/pages/cases"
 import { Solutions } from "@/pages/solutions"
+import { baseURL } from "@/viteBase"
 
 import { Home } from "../pages/home/home"
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: `${baseURL}`,
     element: <AppLayout />,
-    children: [{ path: "/", element: <Home /> }],
+    children: [{ path: `${baseURL}`, element: <Home /> }],
   },
   {
-    path: "/solutions",
+    path: `${baseURL}/solutions`,
     element: <AppLayout />,
-    children: [{ path: "/solutions", element: <Solutions /> }],
+    children: [{ path: `${baseURL}/solutions`, element: <Solutions /> }],
   },
   {
-    path: "/cases",
+    path: `${baseURL}/cases`,
     element: <AppLayout />,
-    children: [{ path: "/cases", element: <Cases /> }],
+    children: [{ path: `${baseURL}/cases`, element: <Cases /> }],
   },
   {
-    path: "/carrer",
+    path: `${baseURL}/carrer`,
     element: <AppLayout />,
-    children: [{ path: "/carrer", element: <Carrer /> }],
+    children: [{ path: `${baseURL}/carrer`, element: <Carrer /> }],
   },
   {
-    path: "/about",
+    path: `${baseURL}/about`,
     element: <AppLayout />,
-    children: [{ path: "/about", element: <AboutUs /> }],
+    children: [{ path: `${baseURL}/about`, element: <AboutUs /> }],
   },
 ])
