@@ -28,7 +28,7 @@ export function CustomersCarousel() {
 
   return (
     <>
-      <div className="py-6">
+      <div className="flex flex-col gap-2 pb-12 pt-6">
         <p className="text-center font-extrabold uppercase">
           Quem usa aprova a Vonix:
         </p>
@@ -44,12 +44,12 @@ export function CustomersCarousel() {
           {Logos.concat(Logos).map((logo, index) => (
             <div
               key={index}
-              className={`${isMobile ? "basis-1/3" : "basis-1/5"} m-auto flex-none`}
+              className={`${isMobile ? "basis-1/3" : "basis-1/6"} m-auto flex-none`}
             >
               <img
                 src={logo}
                 alt={`Logo ${index}`}
-                className="m-auto w-32 px-2 brightness-75 invert filter dark:filter-none"
+                className={`m-auto ${isMobile ? "w-32" : "w-64"}  px-2 brightness-75 invert filter dark:filter-none`}
               />
             </div>
           ))}

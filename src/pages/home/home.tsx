@@ -85,20 +85,25 @@ export function Home() {
           <Indicadores />
         </div>
 
-        <div>
+        <div className="flex">
+          <div className="bg-vonix-blue-400 dark:bg-vonix-orange-600 lg:flex-1" />
+
           <div
-            className={`my-4 flex w-[80%] items-center justify-between rounded-r-full bg-vonix-blue-400 p-8 dark:bg-vonix-orange-600`}
+            className={`m-auto mr-12 w-full rounded-r-full bg-vonix-blue-400 p-8 dark:bg-vonix-orange-600 lg:mr-0 lg:w-[1024px]`}
           >
-            <p className="font-bold text-background">
-              Descubra nossa solução para o nicho do seu negócio.
-            </p>
-            <Button
-              asChild
-              className="rounded-full bg-vonix-blue-600 font-extrabold dark:bg-vonix-orange-400"
-            >
-              <Link to={`${baseURL}/cases`}>Saiba mais</Link>
-            </Button>
+            <div className="flex w-full items-center justify-between gap-4 ">
+              <p className="font-bold text-background">
+                Descubra nossa solução para o nicho do seu negócio.
+              </p>
+              <Button
+                asChild
+                className="rounded-full bg-vonix-blue-600 font-extrabold dark:bg-vonix-orange-400"
+              >
+                <Link to={`${baseURL}/cases`}>Saiba mais</Link>
+              </Button>
+            </div>
           </div>
+          <div className="lg:flex-1" />
         </div>
 
         <div
