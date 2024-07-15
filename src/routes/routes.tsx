@@ -4,7 +4,7 @@ import { AppLayout } from "@/pages/_layouts/appLayout"
 import { AboutUs } from "@/pages/aboutUs"
 import { Carrer } from "@/pages/carrer"
 import { Cases } from "@/pages/cases"
-import { Solutions } from "@/pages/solutions"
+import { Platform } from "@/pages/solution/platform"
 import { baseURL } from "@/viteBase"
 
 import { Home } from "../pages/home/home"
@@ -16,9 +16,9 @@ export const router = createBrowserRouter([
     children: [{ path: `${baseURL}`, element: <Home /> }],
   },
   {
-    path: `${baseURL}/solutions`,
+    path: `${baseURL}/platform`,
     element: <AppLayout />,
-    children: [{ path: `${baseURL}/solutions`, element: <Solutions /> }],
+    children: [{ path: `${baseURL}/platform`, element: <Platform /> }],
   },
   {
     path: `${baseURL}/cases`,

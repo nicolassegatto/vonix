@@ -27,7 +27,7 @@ export function Home() {
   return (
     <>
       <Helmet title="Home" />
-      <div className="flex w-full flex-col">
+      <div className="flex w-full flex-col pt-12">
         <div className={`flex flex-col gap-2 `}>
           <div
             className={`m-auto flex flex-col items-center justify-center gap-4 px-6 lg:w-[1024px]`}

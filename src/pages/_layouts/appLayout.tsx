@@ -27,7 +27,7 @@ export function AppLayout() {
             <NavBar />
           </div>
 
-          <div className="m-auto flex w-full flex-col items-center justify-center pt-12">
+          <div className="m-auto flex w-full flex-col items-center justify-center">
             <Outlet />
           </div>
 

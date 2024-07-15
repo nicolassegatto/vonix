@@ -16,7 +16,9 @@ export function DesktopMenu() {
               to={page.to}
               className="flex items-center text-muted-foreground hover:text-foreground data-[active=true]:text-foreground"
             >
-              <span className="first-letter:uppercase">{page.name}</span>
+              <span className="font-bold first-letter:uppercase">
+                {page.name}
+              </span>
             </NavLink>
           )
         })}
