@@ -21,24 +21,24 @@ export function AppLayout() {
           },
         ]}
       />
-      <div className="min-h-screen antialiased ">
-        <div className="flex flex-col justify-start ">
-          <div className={`sticky top-0 z-50 bg-background px-2 shadow-md`}>
+      <div className="flex flex-col justify-start antialiased">
+        <div className="sticky top-0 z-50 w-full bg-background shadow-lg">
+          <div className="mx-auto w-full lg:max-w-screen-lg xl:max-w-screen-xl">
             <NavBar />
           </div>
-
-          <div className="m-auto flex w-full flex-col items-center justify-center">
-            <Outlet />
-          </div>
-
-          <footer
-            className={`flex w-full flex-col gap-4 px-2 py-4 ${
-              theme === "dark" ? "bg-vonix-orange-600" : "bg-vonix-blue-400"
-            }`}
-          >
-            <Footer />
-          </footer>
         </div>
+
+        <div className="m-auto flex w-full flex-col items-center justify-center">
+          <Outlet />
+        </div>
+
+        <footer
+          className={`flex w-full flex-col gap-4 px-2 py-4 ${
+            theme === "dark" ? "bg-vonix-orange-600" : "bg-vonix-blue-400"
+          }`}
+        >
+          <Footer />
+        </footer>
       </div>
     </>
   )

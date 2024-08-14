@@ -11,7 +11,7 @@ export function NavBar() {
   const { isMobile } = useContext(IsMobileContext)
 
   return (
-    <div className="m-auto flex h-16 w-full items-center justify-between lg:w-[1024px]">
+    <div className="m-auto flex h-24 w-full items-center justify-between p-8">
       {isMobile ? <MobileMenu /> : <DesktopMenu />}
     </div>
   )

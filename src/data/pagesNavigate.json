@@ -1,27 +1,54 @@
 [
     {
-        "id": 1,
-        "name": "página inicial",
-        "to": "/vonix/"
-    },
-    {
         "id": 2,
         "name": "plataforma",
-        "to": "/vonix/platform"
+        "to": "/vonix/platform",
+        "description": "conheça a plataforma",
+        "menu": [
+            {
+                "id": 1,
+                "name": "gestao da operação",
+                "description": "controle e gerencie sua operação",
+                "to": "/vonix/platform/#management"
+            },
+            {
+                "id": 2,
+                "name": "dashboard",
+                "description": "acompanhe em tempo real o desempenho da sua operação",
+                "to": "/vonix/platform/#dashes"
+            },
+            {
+                "id": 3,
+                "name": "desenvolvimento",
+                "description": "construa fluxos de atendimento, APIs e integrações",
+                "to": "/vonix/platform/#development"
+            }
+        ]
     },
     {
         "id": 3,
         "name": "cases",
-        "to": "/vonix/cases"
-    },
-    {
-        "id": 4,
-        "name": "carreira",
-        "to": "/vonix/carrer"
-    },
-    {
-        "id": 5,
-        "name": "sobre nós",
-        "to": "/vonix/about"
+        "to": "/vonix/cases",
+        "description": "conheça nossos cases",
+        "menu": [
+            {
+                "id": 1,
+                "name": "atendimento",
+                "description": "conheça nossos cases de atendimento",
+                "to": "/vonix/cases/#attendance"
+            },
+            {
+                "id": 2,
+                "name": "vendas",
+                "description": "conheça nossos cases de vendas",
+                "to": "/vonix/cases/#sales"
+            },
+            {
+                "id": 3,
+                "name": "cobrança",
+                "description": "conheça nossos cases de cobrança",
+                "to": "/vonix/cases/#collection"
+            }
+        ]
     }
 ]

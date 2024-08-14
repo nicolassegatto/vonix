@@ -5,12 +5,13 @@ import { RouterProvider } from "react-router-dom"
 
 import { ThemeProvider } from "./components/theme-provider"
 import { IsMobileContextProvider } from "./context/isMobileContext"
+import { NavActiveContextProvider } from "./context/isNavActive"
 import { router } from "./routes/routes"
 
 export function App() {
   return (
     <ThemeProvider
-      defaultTheme="system"
+      defaultTheme="light"
       storageKey="vite-ui-theme"
     >
       <HelmetProvider>
@@ -21,7 +22,9 @@ export function App() {
           apple-mobile-web-app-status-bar-style="%s"
         />
         <IsMobileContextProvider>
-          <RouterProvider router={router} />
+          <NavActiveContextProvider>
+            <RouterProvider router={router} />
+          </NavActiveContextProvider>
         </IsMobileContextProvider>
       </HelmetProvider>
     </ThemeProvider>

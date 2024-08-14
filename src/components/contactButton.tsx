@@ -31,7 +31,7 @@ export function ContactButton({
     <Dialog>
       <DialogTrigger asChild>
         <Button
-          className={`rounded-full font-bold ${className}`}
+          className={`rounded-xl font-bold shadow-md ${className}`}
           variant={variant}
         >
           {text}
