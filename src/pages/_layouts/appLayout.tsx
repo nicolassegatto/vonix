@@ -1,14 +1,17 @@
+import { useContext } from "react"
 import { Helmet } from "react-helmet-async"
 import { Outlet } from "react-router-dom"
 
 import { Footer } from "@/components/footer"
 import { NavBar } from "@/components/navbar"
 import { useTheme } from "@/components/theme-provider"
+import { NavActiveContext } from "@/context/isNavActive"
 
 export function AppLayout() {
   const { theme } = useTheme()
   const themeColor = theme === "dark" ? "#FD6602" : "#175A9F"
-
+  const { setNavActive } = useContext(NavActiveContext)
+  setNavActive(true)
   return (
     <>
       <Helmet

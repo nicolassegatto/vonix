@@ -46,11 +46,11 @@ export function DesktopMenu() {
                       </span>
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className="grid w-[600px] flex-1 grid-cols-[.75fr_1fr] gap-3 p-6">
+                      <ul className="grid w-full flex-1 grid-cols-[.75fr_1fr] gap-3 p-6">
                         <li className="row-span-3">
                           <NavigationMenuLink asChild>
                             <a
-                              className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                              className="flex h-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                               href="https://ui.shadcn.com"
                             >
                               <div className="font-heading mb-2 mt-4 text-lg">

@@ -49,7 +49,7 @@ export function CustomersCarousel() {
               <img
                 src={logo}
                 alt={`Logo ${index}`}
-                className={`m-auto ${isMobile ? "w-32" : "w-64"}  px-2 brightness-75 invert filter dark:filter-none`}
+                className={`m-auto ${isMobile ? "w-32" : "w-64"}  px-2 brightness-100 filter`}
               />
             </div>
           ))}
