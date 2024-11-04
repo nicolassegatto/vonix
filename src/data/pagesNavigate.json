@@ -9,19 +9,19 @@
                 "id": 1,
                 "name": "gestao da operação",
                 "description": "controle e gerencie sua operação",
-                "to": "/vonix/platform/#management"
+                "to": "/vonix/platform"
             },
             {
                 "id": 2,
                 "name": "dashboard",
                 "description": "acompanhe em tempo real o desempenho da sua operação",
-                "to": "/vonix/platform/#dashes"
+                "to": "/vonix/platform"
             },
             {
                 "id": 3,
                 "name": "desenvolvimento",
                 "description": "construa fluxos de atendimento, APIs e integrações",
-                "to": "/vonix/platform/#development"
+                "to": "/vonix/platform"
             }
         ]
     },
