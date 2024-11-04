@@ -3,6 +3,7 @@ import { useContext } from "react"
 import { Helmet } from "react-helmet-async"
 
 import bannerVonixPc from "@/assets/bannerVonixPC.png"
+import applicationBg from "@/assets/vonixLogoBg.png"
 import {
   Accordion,
   AccordionContent,
@@ -42,7 +43,7 @@ export function Platform() {
         </div>
         <div className="flex items-center justify-center p-4">
           <img
-            src="https://scontent.fudi1-1.fna.fbcdn.net/v/t39.8562-6/277460306_662447631644563_5820508086522181241_n.png?_nc_cat=104&ccb=1-7&_nc_sid=f537c7&_nc_ohc=QH40RiP0JgEQ7kNvgFwEjcR&_nc_ht=scontent.fudi1-1.fna&oh=00_AYA2wWPetxZc1rTf8B1id06na0JrpVvOSyNLXKH7Gpg0Sg&oe=6699A44B"
+            src={applicationBg}
             alt="platform image"
           />
         </div>

@@ -10,51 +10,46 @@ export function CustomersCarousel() {
   useEffect(() => {
     const scroll = () => {
       if (carouselRef.current) {
-        const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current
-        if (scrollLeft + clientWidth >= scrollWidth) {
-          carouselRef.current.scrollLeft = 0 // Reset to the beginning
+        const { scrollLeft, scrollWidth } = carouselRef.current
+
+        // Verifica se está perto do final da rolagem
+        if (scrollLeft >= scrollWidth / 2) {
+          // Move de volta para o início do conteúdo duplicado
+          carouselRef.current.scrollLeft = 0
         } else {
-          carouselRef.current.scrollLeft += 1 // Continue scrolling
+          // Continua a rolagem
+          carouselRef.current.scrollLeft += 1
         }
       }
     }
 
-    // Set an interval to call the scroll function every 20 milliseconds
+    // Configura o intervalo para a função de rolagem
     const interval = setInterval(scroll, 20)
 
-    // Cleanup the interval on component unmount
+    // Limpa o intervalo ao desmontar o componente
     return () => clearInterval(interval)
   }, [])
 
   return (
-    <>
-      <div className="flex flex-col gap-2 pb-12 pt-6">
-        <p className="text-center font-extrabold uppercase">
-          Quem usa aprova a Vonix:
-        </p>
-        <p className="text-center text-muted-foreground">
-          empresas que construíram sua jornada digital
-        </p>
+    <div
+      className="m-auto overflow-hidden"
+      ref={carouselRef}
+    >
+      <div className="flex">
+        {/* Concatena os logos para duplicar o conteúdo */}
+        {Logos.concat(Logos).map((logo, index) => (
+          <div
+            key={index}
+            className={`${isMobile ? "basis-1/3" : "basis-1/6"} m-auto flex-none`}
+          >
+            <img
+              src={logo}
+              alt={`Logo ${index}`}
+              className={`m-auto ${isMobile ? "w-32" : "w-64"}  px-2 brightness-100 filter`}
+            />
+          </div>
+        ))}
       </div>
-      <div
-        className="m-auto overflow-hidden"
-        ref={carouselRef}
-      >
-        <div className="flex">
-          {Logos.concat(Logos).map((logo, index) => (
-            <div
-              key={index}
-              className={`${isMobile ? "basis-1/3" : "basis-1/6"} m-auto flex-none`}
-            >
-              <img
-                src={logo}
-                alt={`Logo ${index}`}
-                className={`m-auto ${isMobile ? "w-32" : "w-64"}  px-2 brightness-100 filter`}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
+    </div>
   )
 }

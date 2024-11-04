@@ -2,27 +2,29 @@ import { useContext } from "react"
 import { Helmet } from "react-helmet-async"
 
 import bgLoop from "@/assets/bgLoop.mp4"
-import { NavBar } from "@/components/navbar"
+import { useTheme } from "@/components/theme-provider"
 import { Button } from "@/components/ui/button"
 import { IsMobileContext } from "@/context/isMobileContext"
-import { NavActiveContext } from "@/context/isNavActive"
 
+import { AboutVonixBanner } from "./components/aboutBanner"
+import { BlogCard } from "./components/blogCard"
 import { CustomersCarousel } from "./components/customersCarousel"
+import { VonixFeatures } from "./components/vonixFeatures"
 
 export function Home() {
   const { isMobile } = useContext(IsMobileContext)
-  const { navActive, setNavActive } = useContext(NavActiveContext)
+  const { theme } = useTheme()
 
   return (
-    <>
+    <div className="flex w-full flex-col">
       <Helmet title="Home" />
-      <div className="relative flex h-screen w-full flex-col">
+      <div className="flex h-[calc(100vh-6rem)] w-full flex-col">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 h-full w-full rounded-b-3xl object-cover"
+          className={`absolute inset-0 h-screen w-full object-cover`}
         >
           <source
             src={bgLoop}
@@ -31,33 +33,49 @@ export function Home() {
         </video>
 
         <div
-          className={`sticky top-0 z-50 w-full ${navActive && "bg-background shadow-lg"}`}
-          onMouseEnter={() => setNavActive(true)}
-          onMouseLeave={() => setNavActive(false)}
+          className={`absolute inset-0 h-screen backdrop-blur-lg ${theme === "dark" ? "bg-black bg-opacity-70" : "bg-vonix-blue-400 bg-opacity-60"}`}
+        />
+
+        <div
+          className={`relative flex h-screen flex-col overflow-hidden py-16 ${theme === "dark" ? "text-foreground" : "text-background"}`}
         >
-          <div className="mx-auto w-full lg:max-w-screen-lg xl:max-w-screen-xl">
-            <NavBar />
-          </div>
-        </div>
-
-        <div className="absolute inset-0 bg-black bg-opacity-50" />
-
-        <div className="flex h-screen flex-col py-16">
-          <div className="relative z-10 m-auto flex h-full flex-col items-center justify-center text-white lg:max-w-screen-lg xl:max-w-screen-xl">
-            <h1 className="text-center text-8xl font-bold">
-              Impulsione a experiencia do seu cliente com a Vonix.
+          <div className="m-auto flex flex-col items-center justify-center gap-8 font-quicksand lg:max-w-screen-lg xl:max-w-screen-xl">
+            <h1
+              className={`max-w-[900px] text-center font-bold drop-shadow-lg ${isMobile ? "px-4 text-4xl" : "text-7xl"}`}
+            >
+              Evolua seu negócio para a nova era digital.
             </h1>
-            <p className="mt-4 text-lg">
-              Transforme sua operação com atendimento dinâmico e com IA.
+            <p
+              className={`mt-4 max-w-[800px] text-center font-bold drop-shadow-lg ${isMobile ? "px-4 text-lg" : "text-2xl"}`}
+            >
+              Ofereça hoje a experiência mais avançada para gestão e automação
+              de canais digitais. Tudo isso com a Vonix.
             </p>
-            <Button>Vonix platform</Button>
+            <Button
+              className={`rounded-full  bg-vonix-orange-600 p-8 font-extrabold shadow-xl ${isMobile ? "text-md" : "text-xl"}`}
+            >
+              VonixCC Cloud
+            </Button>
           </div>
 
-          <div>
+          <div className="flex flex-col gap-12 ">
             <CustomersCarousel />
+            <p
+              className={`text-center font-quicksand font-bold ${isMobile && "text-sm"}`}
+            >
+              Empresas que construíram sua jornada digital
+            </p>
           </div>
         </div>
       </div>
-    </>
+
+      <div className={`my-32 flex flex-col gap-32  px-6`}>
+        <BlogCard />
+
+        <VonixFeatures />
+
+        <AboutVonixBanner />
+      </div>
+    </div>
   )
 }

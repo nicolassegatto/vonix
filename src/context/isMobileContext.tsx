@@ -12,7 +12,7 @@ export function IsMobileContextProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024)
+      setIsMobile(window.innerWidth <= 1024)
     }
 
     handleResize()

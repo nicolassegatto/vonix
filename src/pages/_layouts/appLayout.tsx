@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { Helmet } from "react-helmet-async"
 import { Outlet } from "react-router-dom"
 
+import { ContactBanner } from "@/components/contactBanner"
 import { Footer } from "@/components/footer"
 import { NavBar } from "@/components/navbar"
 import { useTheme } from "@/components/theme-provider"
@@ -35,8 +36,10 @@ export function AppLayout() {
           <Outlet />
         </div>
 
+        <ContactBanner />
+
         <footer
-          className={`flex w-full flex-col gap-4 px-2 py-4 ${
+          className={`mt-12 flex w-full flex-col gap-4 px-2 py-4 ${
             theme === "dark" ? "bg-vonix-orange-600" : "bg-vonix-blue-400"
           }`}
         >
