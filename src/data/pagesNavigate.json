@@ -1,53 +1,27 @@
 [
     {
         "id": 2,
-        "name": "plataforma",
-        "to": "/vonix/platform",
+        "name": "Menu",
+        "to": "/vonix",
         "description": "conheça a plataforma",
         "menu": [
             {
                 "id": 1,
-                "name": "gestao da operação",
-                "description": "controle e gerencie sua operação",
+                "name": "Plataforma",
+                "description": "Conheça nossa plataforma, seus recursos e integrações. Desenvolva, gerencie, e orquestre sua operação em um só lugar.",
                 "to": "/vonix/platform"
             },
             {
                 "id": 2,
-                "name": "dashboard",
-                "description": "acompanhe em tempo real o desempenho da sua operação",
-                "to": "/vonix/platform"
+                "name": "Cases",
+                "description": "Conheça nossos cases de sucesso, e como a Vonix pode ajudar a sua empresa a alcaçar os resultados esperados.",
+                "to": "/vonix/cases"
             },
             {
                 "id": 3,
-                "name": "desenvolvimento",
-                "description": "construa fluxos de atendimento, APIs e integrações",
-                "to": "/vonix/platform"
-            }
-        ]
-    },
-    {
-        "id": 3,
-        "name": "cases",
-        "to": "/vonix/cases",
-        "description": "conheça nossos cases",
-        "menu": [
-            {
-                "id": 1,
-                "name": "atendimento",
-                "description": "conheça nossos cases de atendimento",
-                "to": "/vonix/cases/#attendance"
-            },
-            {
-                "id": 2,
-                "name": "vendas",
-                "description": "conheça nossos cases de vendas",
-                "to": "/vonix/cases/#sales"
-            },
-            {
-                "id": 3,
-                "name": "cobrança",
-                "description": "conheça nossos cases de cobrança",
-                "to": "/vonix/cases/#collection"
+                "name": "Sobre nós",
+                "description": "Conheça a Vonix, nossa história, valores e missão.",
+                "to": "/vonix/about"
             }
         ]
     }

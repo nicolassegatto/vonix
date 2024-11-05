@@ -33,7 +33,7 @@ export function Home() {
         </video>
 
         <div
-          className={`absolute inset-0 h-screen backdrop-blur-lg ${theme === "dark" ? "bg-black bg-opacity-70" : "bg-vonix-blue-400 bg-opacity-60"}`}
+          className={`absolute inset-0 h-screen backdrop-blur-lg ${theme === "dark" ? "bg-black bg-opacity-70" : "bg-vonix-blue-600 bg-opacity-40"}`}
         />
 
         <div

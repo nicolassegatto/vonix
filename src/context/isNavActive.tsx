@@ -3,11 +3,15 @@ import { createContext, ReactNode, useEffect, useState } from "react"
 interface NavActiveContextType {
   navActive: boolean
   setNavActive: (active: boolean) => void
+  navMenuOpen: boolean
+  setNavMenuOpen: (open: boolean) => void
 }
 
 export const NavActiveContext = createContext<NavActiveContextType>({
   navActive: false,
   setNavActive: () => {},
+  navMenuOpen: false,
+  setNavMenuOpen: () => {},
 })
 
 export function NavActiveContextProvider({
@@ -16,6 +20,7 @@ export function NavActiveContextProvider({
   children: ReactNode
 }) {
   const [navActive, setNavActiveState] = useState(false)
+  const [navMenuOpen, setNavMenuOpenState] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,8 +40,14 @@ export function NavActiveContextProvider({
     setNavActiveState(active)
   }
 
+  const setNavMenuOpen = (open: boolean) => {
+    setNavMenuOpenState(open)
+  }
+
   return (
-    <NavActiveContext.Provider value={{ navActive, setNavActive }}>
+    <NavActiveContext.Provider
+      value={{ navActive, setNavActive, navMenuOpen, setNavMenuOpen }}
+    >
       {children}
     </NavActiveContext.Provider>
   )

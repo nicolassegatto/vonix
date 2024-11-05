@@ -1,13 +1,13 @@
 import React, { useContext } from "react"
 
-import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
+// import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
 import { NavActiveContext } from "@/context/isNavActive"
 import { cn } from "@/lib/utils"
 
 import pagesNavigate from "../data/pagesNavigate.json"
 import { ContactButton } from "./contactButton"
 import { LogoTheme } from "./logoTheme"
-import { ModeToggle } from "./mode-toggle"
+// import { ModeToggle } from "./mode-toggle"
 import { NavLink } from "./navlink"
 import {
   NavigationMenu,
@@ -19,7 +19,7 @@ import {
 } from "./ui/navigation-menu"
 
 export function DesktopMenu() {
-  const { navActive } = useContext(NavActiveContext)
+  const { navActive, setNavMenuOpen } = useContext(NavActiveContext)
 
   return (
     <div className="flex w-full justify-between gap-8">
@@ -31,13 +31,16 @@ export function DesktopMenu() {
 
       <div className="flex flex-1 items-center justify-end gap-6">
         <div className="flex flex-1 items-center ">
-          <NavigationMenu className="z-[5]">
+          <NavigationMenu
+            onMouseEnter={() => setNavMenuOpen(true)}
+            onMouseLeave={() => setNavMenuOpen(false)}
+          >
             <NavigationMenuList>
               {pagesNavigate.map(page => {
                 return (
                   <NavigationMenuItem key={page.id}>
                     <NavigationMenuTrigger
-                      className={`text-background ${navActive && "text-muted-foreground/70 hover:bg-accent hover:text-muted-foreground hover:shadow-inner"}`}
+                      className={`${navActive && "text-foreground/70 hover:bg-accent hover:text-muted-foreground hover:shadow-inner"}`}
                     >
                       <span
                         className={`text-lg font-bold first-letter:uppercase`}
@@ -50,16 +53,15 @@ export function DesktopMenu() {
                         <li className="row-span-3">
                           <NavigationMenuLink asChild>
                             <a
-                              className="flex h-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                              href="https://ui.shadcn.com"
+                              className="flex h-full select-none flex-col justify-end rounded-xl bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                              href="/"
                             >
-                              <div className="font-heading mb-2 mt-4 text-lg">
-                                shadcn/ui
+                              <div className="font-heading mb-2 mt-4 text-lg font-bold">
+                                Vonix Home
                               </div>
                               <p className="font-base text-sm leading-tight">
-                                Beautifully designed components that you can
-                                copy and paste into your apps. Accessible.
-                                Customizable. Open Source.
+                                A plataforma omnichannel ideal para alavancar o
+                                seu negocio.
                               </p>
                             </a>
                           </NavigationMenuLink>
@@ -80,19 +82,6 @@ export function DesktopMenu() {
                   </NavigationMenuItem>
                 )
               })}
-              <NavigationMenuItem>
-                <NavLink to={"/vonix/about"}>
-                  <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()} text-background ${navActive && "text-muted-foreground/70 hover:bg-accent hover:text-muted-foreground hover:shadow-inner"}`}
-                  >
-                    <span
-                      className={`text-lg font-bold first-letter:uppercase`}
-                    >
-                      Sobre nós
-                    </span>
-                  </NavigationMenuLink>
-                </NavLink>
-              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
@@ -101,7 +90,7 @@ export function DesktopMenu() {
             text="Fale conosco"
             className="bg-vonix-blue-400 dark:bg-vonix-orange-600 "
           />
-          <ModeToggle />
+          {/* {<ModeToggle />} */}
         </div>
       </div>
     </div>
