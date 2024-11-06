@@ -1,14 +1,8 @@
-import { useContext } from "react"
 import { Helmet } from "react-helmet-async"
 
 import imageUs from "@/assets/1.jpg"
-import { useTheme } from "@/components/theme-provider"
-import { IsMobileContext } from "@/context/isMobileContext"
 
 export function AboutUs() {
-  const { isMobile } = useContext(IsMobileContext)
-  const { theme } = useTheme()
-
   return (
     <div className="mb-24 flex w-full flex-col gap-24">
       <Helmet title="Sobre nós" />
