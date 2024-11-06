@@ -1,3 +1,5 @@
+import imageSample from "@/assets/6.jpg"
+
 export function WhyVonix() {
   return (
     <div className="w-full">
@@ -17,10 +19,65 @@ export function WhyVonix() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
-          <div className="col-span-2 w-full rounded-3xl bg-muted p-6">oi1</div>
-          <div className="col-span-1 w-full rounded-3xl bg-muted p-6">oi2</div>
-          <div className="col-span-1 w-full rounded-3xl bg-muted p-6">oi3</div>
+        <div className="grid grid-cols-2 gap-4 px-12">
+          <div className="items-strech col-span-2 flex w-full gap-4 rounded-3xl bg-muted p-24">
+            <div className="flex flex-col items-start justify-center gap-2">
+              <h1 className="text-2xl font-bold">
+                Customização e Escalabilidade
+              </h1>
+              <p className="text-lg">
+                Desde pequenos ajustes até grandes integrações, a Vonix oferece
+                flexibilidade para expandir suas funcionalidades conforme seu
+                contact center cresce e evolui.
+              </p>
+            </div>
+            <div className="flex items-stretch">
+              <img
+                className="h-80 rounded-3xl object-cover"
+                src={imageSample}
+                alt="sample"
+              />
+            </div>
+          </div>
+
+          <div className="col-span-1 flex w-full flex-col items-center gap-6 rounded-3xl bg-muted p-12">
+            <div className="flex items-stretch">
+              <img
+                className="h-64 rounded-3xl object-cover"
+                src={imageSample}
+                alt="sample"
+              />
+            </div>
+            <div className="flex flex-col items-start justify-center gap-2">
+              <h1 className="text-2xl font-bold">Tecnologia de Ponta</h1>
+              <p className="text-lg">
+                Com recursos de monitoramento em tempo real, integração
+                multicanal e relatórios personalizados, a Vonix oferece uma
+                plataforma completa que se adapta às necessidades específicas do
+                seu negócio.
+              </p>
+            </div>
+          </div>
+
+          <div className="col-span-1 flex w-full flex-col items-center gap-6 rounded-3xl bg-muted p-12">
+            <div className="flex items-stretch">
+              <img
+                className="h-64 rounded-3xl object-cover"
+                src={imageSample}
+                alt="sample"
+              />
+            </div>
+            <div className="flex flex-col items-start justify-center gap-2">
+              <h1 className="text-2xl font-bold">
+                Gestão Completa do Contact Center
+              </h1>
+              <p className="text-lg">
+                A nossa solução permite uma visão unificada de toda a operação
+                de atendimento, facilitando a supervisão, o controle e o ajuste
+                de prioridades em tempo real.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

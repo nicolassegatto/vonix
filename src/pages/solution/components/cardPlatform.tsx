@@ -2,7 +2,7 @@ import { ServiceInterface } from "@/data/platformServices"
 
 export function CardPlatform({ service }: { service: ServiceInterface }) {
   return (
-    <div className="flex items-center gap-4 rounded-3xl border bg-background p-4 shadow-sm hover:shadow-lg">
+    <div className="flex items-center gap-4 rounded-3xl border bg-muted p-6 shadow-sm hover:shadow-lg">
       <div className="flex w-[35%] items-center justify-center opacity-65">
         {<service.image size={36} />}
       </div>

@@ -6,7 +6,7 @@ export function AboutUs() {
   return (
     <div className="mb-24 flex w-full flex-col gap-24">
       <Helmet title="Sobre nós" />
-      <div className="shadow-inner-bottom -mt-24 bg-vonix-blue-400 pt-32">
+      <div className="-mt-24 bg-vonix-blue-400 pt-32 shadow-inner-bottom">
         <div
           className={`m-auto flex flex-col gap-6 px-6 lg:max-w-screen-lg xl:max-w-screen-xl`}
         >
