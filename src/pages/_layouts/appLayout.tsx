@@ -6,13 +6,14 @@ import { ContactBanner } from "@/components/contactBanner"
 import { Footer } from "@/components/footer"
 import { NavBar } from "@/components/navbar"
 import { useTheme } from "@/components/theme-provider"
+import { IsMobileContext } from "@/context/isMobileContext"
 import { NavActiveContext } from "@/context/isNavActive"
 
 export function AppLayout() {
   const { theme } = useTheme()
   const themeColor = theme === "dark" ? "#FD6602" : "#175A9F"
   const { setNavActive, navMenuOpen } = useContext(NavActiveContext)
-
+  const { isMobile } = useContext(IsMobileContext)
   setNavActive(true)
   return (
     <>
@@ -28,7 +29,9 @@ export function AppLayout() {
       />
 
       <div className="z-[0] flex flex-col justify-start antialiased">
-        <div className="sticky top-5 z-[2] mx-auto w-full px-6 lg:max-w-screen-lg xl:max-w-screen-xl">
+        <div
+          className={`sticky top-5 z-[2] mx-auto w-full ${isMobile ? "px-6" : "px-0"} lg:max-w-screen-lg xl:max-w-screen-xl`}
+        >
           <div className="w-full rounded-3xl bg-white bg-opacity-70 shadow-lg backdrop-blur-lg transition-colors duration-1000 hover:bg-opacity-100 dark:bg-black dark:bg-opacity-30 dark:hover:bg-opacity-100">
             <NavBar />
           </div>

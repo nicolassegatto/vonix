@@ -10,6 +10,7 @@ import { AboutVonixBanner } from "./components/aboutBanner"
 import { BlogCard } from "./components/blogCard"
 import { CustomersCarousel } from "./components/customersCarousel"
 import { VonixFeatures } from "./components/vonixFeatures"
+import { WhyVonix } from "./components/whyVonix"
 
 export function Home() {
   const { isMobile } = useContext(IsMobileContext)
@@ -70,6 +71,8 @@ export function Home() {
       </div>
 
       <div className={`my-32 flex flex-col gap-32  px-6`}>
+        <WhyVonix />
+
         <BlogCard />
 
         <VonixFeatures />
