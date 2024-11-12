@@ -10,7 +10,7 @@ export function AboutVonixBanner() {
 
   return (
     <div
-      className={`${isMobile ? "grid-rows-2" : "grid-cols-3"} m-auto grid  gap-6 lg:max-w-screen-lg xl:max-w-screen-xl`}
+      className={`${isMobile ? "grid-rows-2" : "grid-cols-3 px-6"} m-auto grid  gap-6 lg:max-w-screen-lg xl:max-w-screen-xl`}
     >
       <div
         className={`${isMobile ? "row-span-1" : "col-span-2"} rounded-3xl bg-vonix-blue-400 shadow-lg`}

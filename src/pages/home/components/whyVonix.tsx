@@ -3,7 +3,7 @@ import imageSample from "@/assets/6.jpg"
 export function WhyVonix() {
   return (
     <div className="w-full">
-      <div className="mx-auto flex w-full flex-col gap-16 lg:max-w-screen-lg xl:max-w-screen-xl">
+      <div className="mx-auto flex w-full flex-col gap-16 px-6 lg:max-w-screen-lg xl:max-w-screen-xl">
         <div className="mx-auto flex w-[60%] flex-col items-center justify-center gap-6">
           <h2 className="text-center text-xl font-semibold">
             SOLUÇÕES QUE TRANSFORMAM
@@ -19,7 +19,7 @@ export function WhyVonix() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 px-12">
+        <div className="grid grid-cols-2 gap-4 ">
           <div className="items-strech col-span-2 flex w-full gap-4 rounded-3xl bg-muted p-24">
             <div className="flex flex-col items-start justify-center gap-2">
               <h1 className="text-2xl font-bold">

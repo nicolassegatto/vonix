@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom"
 
 import { AppLayout } from "@/pages/_layouts/appLayout"
-import { AboutUs } from "@/pages/aboutUs"
-import { Cases } from "@/pages/cases"
+import { AboutUs } from "@/pages/about/aboutUs"
+import { Cases } from "@/pages/cases/cases"
 import { Platform } from "@/pages/solution/platform"
 import { baseURL } from "@/viteBase"
 

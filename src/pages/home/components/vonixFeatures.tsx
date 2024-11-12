@@ -94,14 +94,14 @@ export function VonixFeatures() {
                 className="mx-16"
                 setApi={setApi}
               >
-                <CarouselContent className="my-4 ml-4 mr-8 h-[32rem]">
+                <CarouselContent className="mx-4 my-4 h-[32rem]">
                   {VonixFeaturesData.map(feature => (
                     <CarouselItem
                       key={feature.id}
-                      className="basis-1/3 transition-all hover:scale-105"
+                      className="basis-2/1 transition-all hover:scale-105"
                     >
                       <Card
-                        className="h-full rounded-3xl text-background dark:text-foreground"
+                        className="h-full w-80 rounded-3xl text-background dark:text-foreground"
                         style={{
                           backgroundImage: `url(${feature.img})`,
                           backgroundSize: "cover",

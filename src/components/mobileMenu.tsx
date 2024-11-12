@@ -3,7 +3,6 @@ import { useState } from "react"
 
 import pagesNavigate from "../data/pagesNavigate.json"
 import { LogoTheme } from "./logoTheme"
-import { ModeToggle } from "./mode-toggle"
 import { NavLink } from "./navlink"
 import {
   Drawer,
@@ -62,10 +61,6 @@ export function MobileMenu() {
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
-      </div>
-
-      <div className="flex gap-2">
-        <ModeToggle />
       </div>
     </>
   )

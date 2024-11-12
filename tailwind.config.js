@@ -85,6 +85,7 @@ module.exports = {
       },
       boxShadow: {
         "inner-bottom": "inset 0px -8px 30px rgba(0, 0, 0, 0.25)", // personaliza a sombra interna
+        "inner-top": "inset 0px 8px 30px rgba(0, 0, 0, 0.25)", // Sombra interna de cima para baixo
       },
     },
   },
