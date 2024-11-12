@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { Helmet } from "react-helmet-async"
 
-import bgLoop from "@/assets/bgLoop.mp4"
+import bgLoop from "@/assets/bgLoop.gif"
 import { useTheme } from "@/components/theme-provider"
 import { Button } from "@/components/ui/button"
 import { IsMobileContext } from "@/context/isMobileContext"
