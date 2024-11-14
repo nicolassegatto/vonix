@@ -8,7 +8,7 @@ export function WhyVonix() {
 
   return (
     <div className="w-full">
-      <div className="mx-auto flex w-full flex-col gap-16 px-6 lg:max-w-screen-lg xl:max-w-screen-xl">
+      <div className="mx-auto flex w-full flex-col gap-16 px-2 lg:max-w-screen-lg xl:max-w-screen-xl">
         <div
           className={`mx-auto flex ${isMobile ? "w-full" : "w-[60%]"}  flex-col items-center justify-center gap-6`}
         >
@@ -18,7 +18,7 @@ export function WhyVonix() {
             SOLUÇÕES QUE TRANSFORMAM
           </h2>
           <h1
-            className={`text-center ${isMobile ? "text-3xl" : "text-4xl"} font-bold`}
+            className={`text-center ${isMobile ? "text-2xl" : "text-4xl"} font-bold`}
           >
             Personalize o atendimento em larga escala com a plataforma confiável
             da Vonix.

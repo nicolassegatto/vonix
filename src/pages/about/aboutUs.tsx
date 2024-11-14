@@ -12,7 +12,7 @@ export function AboutUs() {
       <Helmet title="Sobre nós" />
       <div className="-mt-24 bg-vonix-blue-400 pt-32 shadow-inner-bottom">
         <div
-          className={`m-auto flex flex-col gap-6 ${isMobile ? "px-12" : "px-6"} lg:max-w-screen-lg xl:max-w-screen-xl`}
+          className={`m-auto flex flex-col gap-6 ${isMobile ? "px-8" : "px-6"} lg:max-w-screen-lg xl:max-w-screen-xl`}
         >
           <div className="flex w-full flex-col justify-center gap-2 py-52 text-background">
             <p className="font-semibold opacity-40">Vonix</p>
@@ -32,7 +32,7 @@ export function AboutUs() {
       </div>
 
       <div
-        className={`mx-auto w-full ${isMobile ? "px-12" : "px-6"} lg:max-w-screen-lg xl:max-w-screen-xl`}
+        className={`mx-auto w-full ${isMobile ? "px-8" : "px-6"} lg:max-w-screen-lg xl:max-w-screen-xl`}
       >
         <div
           className={`flex flex-col items-center justify-center gap-3 rounded-3xl bg-muted shadow-xl`}
@@ -70,7 +70,7 @@ export function AboutUs() {
       </div>
 
       <div className="mx-auto w-full  lg:max-w-screen-lg xl:max-w-screen-xl">
-        <div className={`flex w-full flex-col px-6`}>
+        <div className={`flex w-full flex-col px-8`}>
           <div className="flex flex-col items-stretch gap-16">
             <div className="flex flex-col items-center justify-center gap-4">
               <h1

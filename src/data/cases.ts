@@ -169,7 +169,7 @@ export const dataCaseDepoiments = [
   {
     name: "Nicolas Segatto",
     company: "Algar",
-    role: "Desenvolvedor SR. Tribo de Experiências Digitais",
+    role: "Desenvolvedor SR.",
     description:
       "Descobrir a Vonix nos levou a uma nova fase em nosso call center. Com sua plataforma intuitiva e robusta, desenvolver URAs se transformou em uma jornada ágil e completa. A habilidade de criar códigos em JavaScript e integrar tecnologias avançadas, como STT e TTS, nos permitiu oferecer um atendimento verdadeiramente personalizado.",
     image:

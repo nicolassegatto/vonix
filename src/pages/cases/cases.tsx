@@ -48,7 +48,7 @@ export function Cases() {
       <Helmet title="Cases" />
       <div className="-mt-24 bg-vonix-blue-400 pt-32 shadow-inner-bottom">
         <div
-          className={`m-auto flex flex-col gap-6 ${isMobile ? "px-12" : "px-6"} lg:max-w-screen-lg xl:max-w-screen-xl`}
+          className={`m-auto flex flex-col gap-6 ${isMobile ? "px-8" : "px-6"} lg:max-w-screen-lg xl:max-w-screen-xl`}
         >
           <div className="flex w-full flex-col justify-center gap-2 py-52 text-background">
             <p className="font-semibold opacity-40">Vonix</p>
@@ -67,7 +67,7 @@ export function Cases() {
       </div>
 
       <div
-        className={`mx-auto items-center justify-center gap-6 rounded-3xl  ${isMobile ? "flex flex-col px-12" : "grid grid-cols-2 px-6"} lg:max-w-screen-lg xl:max-w-screen-xl`}
+        className={`mx-auto items-center justify-center gap-6 rounded-3xl  ${isMobile ? "flex flex-col px-8" : "grid grid-cols-2 px-6"} lg:max-w-screen-lg xl:max-w-screen-xl`}
       >
         {dataCases.map((item, index) => (
           <Card
@@ -127,18 +127,24 @@ export function Cases() {
               className={`${isMobile ? "mx-8" : "mx-16"} `}
               setApi={setApi}
             >
-              <CarouselContent className={`my-4 ml-4 mr-8 flex items-center`}>
+              <CarouselContent
+                className={`${isMobile ? "" : " flex items-center"} `}
+              >
                 {dataCaseDepoiments.map(depoiment => (
                   <CarouselItem
                     key={depoiment.name}
-                    className={`${isMobile ? "" : "basis-2/4"} `}
+                    className={`${!isMobile && "basis-6/12"} `}
                   >
                     <Card
-                      className={`flex h-72 items-center justify-center rounded-3xl bg-muted py-6`}
+                      className={`flex items-center justify-center rounded-3xl bg-muted py-6`}
                     >
-                      <CardContent className="flex items-start justify-center gap-6 py-0">
+                      <CardContent
+                        className={`${isMobile ? "flex-col" : ""} flex items-start justify-center gap-6 py-0`}
+                      >
                         <div>
-                          <Avatar className="h-20 w-20 border-4 border-vonix-blue-400">
+                          <Avatar
+                            className={`${isMobile ? "h-12 w-12" : "h-20 w-20"} border-4 border-vonix-blue-400`}
+                          >
                             <AvatarImage src={depoiment.image} />
                             <AvatarFallback>
                               {depoiment.name.charAt(0)}
@@ -147,7 +153,7 @@ export function Cases() {
                         </div>
 
                         <div className="flex flex-col gap-4">
-                          <ScrollArea className="h-24">
+                          <ScrollArea className="h-20">
                             <div>
                               <p className="text-xs text-muted-foreground">
                                 {depoiment.description}

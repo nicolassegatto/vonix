@@ -9,7 +9,7 @@ export function AboutVonixBanner() {
   const { isMobile } = useContext(IsMobileContext)
 
   return (
-    <div className="px-6">
+    <div className="px-2">
       <div
         className={`${isMobile ? "grid-rows-2" : "grid-cols-3 px-6"} m-auto grid  gap-6 lg:max-w-screen-lg xl:max-w-screen-xl`}
       >

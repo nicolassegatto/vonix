@@ -52,7 +52,7 @@ export function Platform() {
       <div
         className={`w-full bg-vonix-blue-400 px-6 pb-32 pt-6 dark:bg-vonix-orange-600`}
       >
-        <div className="m-auto flex flex-col items-center justify-center gap-8 px-4 py-12 lg:w-[1024px]">
+        <div className="m-auto flex flex-col items-center justify-center gap-8 px-2 py-12 lg:w-[1024px]">
           <div className="flex flex-col items-center justify-center">
             <h1 className={`text-center text-4xl font-bold text-background`}>
               Tenha o controle da sua operação!

@@ -42,7 +42,7 @@ export function MobileMenu() {
               </DrawerHeader>
               <div className="mt-4 flex flex-col items-center gap-2">
                 <NavLink
-                  to="/vonix"
+                  to="/vonix/"
                   onClick={() => setIsOpen(false)}
                   className="flex w-full items-center justify-center border-b p-2 font-quicksand text-muted-foreground hover:text-foreground data-[active=true]:text-foreground"
                 >
