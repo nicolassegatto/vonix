@@ -48,18 +48,18 @@ export function Home() {
         >
           <div className="m-auto flex flex-col items-center justify-center gap-8 font-quicksand lg:max-w-screen-lg xl:max-w-screen-xl">
             <h1
-              className={`max-w-[900px] text-center font-bold drop-shadow-lg ${isMobile ? "px-4 text-4xl" : "text-7xl"}`}
+              className={`max-w-[900px] text-center font-bold drop-shadow-lg ${isMobile ? "px-4 text-3xl" : "text-7xl"}`}
             >
               Evolua seu negócio para a nova era digital.
             </h1>
             <p
-              className={`mt-4 max-w-[800px] text-center font-bold drop-shadow-lg ${isMobile ? "px-4 text-lg" : "text-2xl"}`}
+              className={`mt-4 max-w-[800px] text-center font-bold drop-shadow-lg ${isMobile ? "text-md px-4" : "text-2xl"}`}
             >
               Ofereça hoje a experiência mais avançada para gestão e automação
               de canais digitais. Tudo isso com a Vonix.
             </p>
             <Button
-              className={`rounded-full  bg-vonix-orange-600 p-8 font-extrabold shadow-xl ${isMobile ? "text-md" : "text-xl"}`}
+              className={`rounded-full bg-vonix-orange-600  font-extrabold shadow-xl ${isMobile ? "p-6 text-sm" : "p-8 text-xl"}`}
             >
               VonixCC Cloud
             </Button>

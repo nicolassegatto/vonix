@@ -1,9 +1,13 @@
+import { useContext } from "react"
 import { useForm } from "react-hook-form"
+
+import { IsMobileContext } from "@/context/isMobileContext"
 
 import contact from "../assets/contactPerson.png"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Label } from "./ui/label"
+import { ScrollArea } from "./ui/scroll-area"
 import {
   Select,
   SelectContent,
@@ -17,19 +21,28 @@ import { Textarea } from "./ui/textarea"
 
 export function Contact() {
   const { register, handleSubmit } = useForm()
+  const { isMobile } = useContext(IsMobileContext)
 
   function handleContactRequest(data: any) {
     console.log(data)
   }
 
   return (
-    <div className={`flex w-full flex-col rounded-3xl px-6 `}>
-      <div className="flex items-center justify-between">
-        <div className="flex flex-col gap-6">
-          <h1 className="text-6xl font-bold text-vonix-blue-400">
+    <div
+      className={`${isMobile ? "" : "px-6"} flex w-full flex-col rounded-3xl`}
+    >
+      <div
+        className={`${isMobile ? "" : "px-16"} flex items-center justify-between`}
+      >
+        <div className={`flex flex-col gap-4`}>
+          <h1
+            className={`${isMobile ? "text-2xl" : "text-6xl"} font-bold text-vonix-blue-400`}
+          >
             Fale com a gente!
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p
+            className={`${isMobile ? "text-xs" : "text-lg"} text-muted-foreground`}
+          >
             Deixe seu contato que o nosso especialista em negocios entrará em
             contato em poucas horas
           </p>
@@ -38,13 +51,13 @@ export function Contact() {
         <img
           src={contact}
           alt="contact person"
-          className="max-h-64"
+          className={`${isMobile ? "max-h-32" : "max-h-48"}`}
         />
       </div>
 
       <div className="rounded-3xl border bg-slate-100 p-6 dark:bg-slate-900">
         <form
-          className="flex flex-col gap-4"
+          className={`flex flex-col gap-2 `}
           onSubmit={handleSubmit(handleContactRequest)}
         >
           <div>
@@ -109,10 +122,11 @@ export function Contact() {
             </Label>
             <Textarea
               id="message"
-              className="resize-none rounded-3xl"
+              className={`${isMobile ? "" : ""} resize-none rounded-3xl`}
               {...register("message")}
             />
           </div>
+
           <Button
             type="submit"
             variant={"default"}
@@ -120,15 +134,17 @@ export function Contact() {
           >
             Enviar
           </Button>
-          <p className="text-xs text-muted-foreground">
-            Os dados pessoais coletados neste formulário têm por finalidade o
-            retorno à mensagem enviada. Referidos dados não serão utilizados
-            para forma adversa da finalidade pretendida. Uma vez cumprida com a
-            finalidade, os dados ficarão armazenados pelo tempo necessário para
-            cumprir com a finalidade e, após referido prazo, serão excluídos da
-            base de dados, nos termos da LGPD. Qualquer dúvida, basta entrar em
-            contato com o Encarregado.
-          </p>
+          <ScrollArea className={`h-12`}>
+            <p className="text-xs text-muted-foreground">
+              Os dados pessoais coletados neste formulário têm por finalidade o
+              retorno à mensagem enviada. Referidos dados não serão utilizados
+              para forma adversa da finalidade pretendida. Uma vez cumprida com
+              a finalidade, os dados ficarão armazenados pelo tempo necessário
+              para cumprir com a finalidade e, após referido prazo, serão
+              excluídos da base de dados, nos termos da LGPD. Qualquer dúvida,
+              basta entrar em contato com o Encarregado.
+            </p>
+          </ScrollArea>
         </form>
       </div>
     </div>
