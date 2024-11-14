@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form"
 
+import contact from "../assets/contactPerson.png"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Label } from "./ui/label"
@@ -22,7 +23,25 @@ export function Contact() {
   }
 
   return (
-    <div className={`flex w-full flex-col gap-4 rounded-3xl px-6 `}>
+    <div className={`flex w-full flex-col rounded-3xl px-6 `}>
+      <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-6">
+          <h1 className="text-6xl font-bold text-vonix-blue-400">
+            Fale com a gente!
+          </h1>
+          <p className="text-lg text-muted-foreground">
+            Deixe seu contato que o nosso especialista em negocios entrará em
+            contato em poucas horas
+          </p>
+        </div>
+
+        <img
+          src={contact}
+          alt="contact person"
+          className="max-h-64"
+        />
+      </div>
+
       <div className="rounded-3xl border bg-slate-100 p-6 dark:bg-slate-900">
         <form
           className="flex flex-col gap-4"

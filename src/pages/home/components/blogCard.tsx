@@ -15,24 +15,26 @@ export function BlogCard() {
 
   if (isMobile) {
     return (
-      <div
-        className="grid grid-rows-2 rounded-xl p-6"
-        style={{
-          backgroundImage: `url(${img})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="row-span-1"></div>
-        <div className="row-span-1 flex flex-col gap-3 rounded-xl bg-gray-500 bg-opacity-50 p-4 text-white backdrop-blur-3xl">
-          <h1 className="text-lg font-bold">{title}</h1>
-          <p className="text-sm">{description}</p>
-          <Button
-            asChild
-            className="bg-vonix-orange-600 text-xl font-bold"
-          >
-            <Link to="">Saiba mais</Link>
-          </Button>
+      <div className="px-4">
+        <div
+          className="grid grid-rows-2 rounded-3xl p-6"
+          style={{
+            backgroundImage: `url(${img})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="row-span-1"></div>
+          <div className="row-span-1 flex flex-col gap-3 rounded-3xl bg-gray-500 bg-opacity-50 p-4 text-white backdrop-blur-3xl">
+            <h1 className="text-lg font-bold">{title}</h1>
+            <p className="text-sm">{description}</p>
+            <Button
+              asChild
+              className="rounded-3xl bg-vonix-orange-600 text-xl font-bold"
+            >
+              <Link to="">Saiba mais</Link>
+            </Button>
+          </div>
         </div>
       </div>
     )

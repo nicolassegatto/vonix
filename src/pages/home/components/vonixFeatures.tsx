@@ -42,7 +42,7 @@ export function VonixFeatures() {
 
   return (
     <div
-      className={`m-auto flex flex-col gap-10 lg:max-w-screen-lg xl:max-w-screen-xl ${theme === "dark" && isMobile && "bg-vonix-orange-600 "} ${isMobile && "-mx-6 bg-vonix-blue-400 px-4 py-12"}`}
+      className={`m-auto flex flex-col gap-10 lg:max-w-screen-lg xl:max-w-screen-xl ${theme === "dark" && isMobile && "bg-vonix-orange-600 "} ${isMobile && "-mx-6 bg-vonix-blue-400 px-12 py-12"}`}
     >
       <div
         className={`${isMobile ? `rounded-3xl bg-opacity-75 p-6 shadow-lg backdrop-blur-3xl ${theme === "dark" ? "bg-black" : "bg-white"}` : "flex flex-col gap-6"} `}
@@ -50,6 +50,11 @@ export function VonixFeatures() {
         <div
           className={`${isMobile && "mb-12 mt-6"} flex w-full flex-col items-center justify-center gap-6`}
         >
+          {isMobile && (
+            <h2 className={`w-full font-bold text-vonix-blue-800`}>
+              SOLUÇÕES PARA O SUCESSO
+            </h2>
+          )}
           <h1
             className={`font-semibold text-vonix-blue-800 ${theme === "dark" && "text-vonix-orange-600"} ${isMobile ? "text-3xl" : "text-center text-5xl "}`}
           >

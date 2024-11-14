@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { Helmet } from "react-helmet-async"
 
-import bgLoop from "@/assets/bgLoop.gif"
+import bgLoop from "@/assets/bgLoop.mp4"
 import { useTheme } from "@/components/theme-provider"
 import { Button } from "@/components/ui/button"
 import { IsMobileContext } from "@/context/isMobileContext"
@@ -32,6 +32,12 @@ export function Home() {
             type="video/mp4"
           />
         </video>
+        {/* <img
+          src={bgLoop}
+          alt="Background animado"
+          className="absolute inset-0 h-screen w-full object-cover"
+          style={{ animation: "fade-in 0.5s ease-in" }} // Opcional: adicione uma animação de fade-in
+        /> */}
 
         <div
           className={`absolute inset-0 h-screen backdrop-blur-lg ${theme === "dark" ? "bg-black bg-opacity-70" : "bg-vonix-blue-600 bg-opacity-40"}`}
@@ -70,7 +76,7 @@ export function Home() {
         </div>
       </div>
 
-      <div className={`my-32 flex flex-col gap-32  px-6`}>
+      <div className={`my-32 flex flex-col gap-32 px-6`}>
         <WhyVonix />
 
         <BlogCard />

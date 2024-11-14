@@ -13,7 +13,6 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "./ui/navigation-menu"
@@ -24,7 +23,7 @@ export function DesktopMenu() {
   return (
     <div className="flex w-full justify-between gap-8">
       <div>
-        <NavLink to={"/vonix/"}>
+        <NavLink to={"/vonix"}>
           <LogoTheme />
         </NavLink>
       </div>
@@ -51,20 +50,20 @@ export function DesktopMenu() {
                     <NavigationMenuContent>
                       <ul className="grid w-full flex-1 grid-cols-[.75fr_1fr] gap-3 p-6">
                         <li className="row-span-3">
-                          <NavigationMenuLink asChild>
-                            <a
-                              className="flex h-full select-none flex-col justify-end rounded-xl bg-gradient-to-t from-vonix-blue-400/80 to-muted p-6 text-background no-underline outline-none focus:shadow-md"
-                              href="/"
-                            >
-                              <div className="font-heading mb-2 mt-4 text-lg font-bold">
-                                Vonix Home
-                              </div>
-                              <p className="font-base text-sm leading-tight">
-                                A plataforma omnichannel ideal para alavancar o
-                                seu negocio.
-                              </p>
-                            </a>
-                          </NavigationMenuLink>
+                          <NavLink
+                            to="/vonix"
+                            className={cn(
+                              `flex h-full select-none flex-col justify-end rounded-xl bg-accent p-6 no-underline outline-none transition-shadow hover:shadow-xl`,
+                            )}
+                          >
+                            <div className="font-heading text-base font-semibold leading-none">
+                              Vonix Home
+                            </div>
+                            <p className="font-base line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              A plataforma omnichannel ideal para alavancar o
+                              seu negocio.
+                            </p>
+                          </NavLink>
                         </li>
                         {page.menu.map(subPage => {
                           return (
@@ -100,24 +99,22 @@ export function DesktopMenu() {
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+>(({ className, title, children, ...props }) => {
   return (
     <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "text-text rounded-base dark:hover:border-darkBorder block select-none space-y-1 rounded-xl border-2 border-transparent p-3 leading-none no-underline outline-none transition-colors hover:border-border hover:bg-accent",
-            className,
-          )}
-          {...props}
-        >
-          <div className="font-heading text-base leading-none">{title}</div>
-          <p className="font-base line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
+      <NavLink
+        to={props.href || "/vonix"}
+        className={cn(
+          `text-text rounded-base dark:hover:border-darkBorder block select-none space-y-1 rounded-xl border-2 border-transparent p-3 leading-none no-underline outline-none transition-colors hover:border-border hover:bg-accent data-[active=true]:border-border data-[active=true]:bg-accent`,
+          className,
+        )}
+        {...props}
+      >
+        <div className="font-heading text-base leading-none">{title}</div>
+        <p className="font-base line-clamp-2 text-sm leading-snug text-muted-foreground">
+          {children}
+        </p>
+      </NavLink>
     </li>
   )
 })
