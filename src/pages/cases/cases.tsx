@@ -46,7 +46,7 @@ export function Cases() {
   return (
     <div className="mb-24 flex w-full flex-col gap-24">
       <Helmet title="Cases" />
-      <div className="-mt-24 bg-vonix-blue-400 pt-32 shadow-inner-bottom">
+      <div className="-mt-24 bg-vonix-blue-400 pt-32 shadow-inner-bottom dark:bg-vonix-orange-600">
         <div
           className={`m-auto flex flex-col gap-6 ${isMobile ? "px-8" : "px-6"} lg:max-w-screen-lg xl:max-w-screen-xl`}
         >
@@ -116,7 +116,7 @@ export function Cases() {
         ))}
       </div>
 
-      <div className="bg-vonix-blue-400 pt-32 shadow-inner-top">
+      <div className="bg-vonix-blue-400 pt-32 shadow-inner-top dark:bg-vonix-orange-600">
         <div className="m-auto flex flex-col gap-4 px-6 lg:max-w-screen-lg xl:max-w-screen-xl">
           <div>
             <h1 className="text-2xl font-bold text-background">Depoimentos</h1>
@@ -143,7 +143,7 @@ export function Cases() {
                       >
                         <div>
                           <Avatar
-                            className={`${isMobile ? "h-12 w-12" : "h-20 w-20"} border-4 border-vonix-blue-400`}
+                            className={`${isMobile ? "h-12 w-12" : "h-20 w-20"} border-4 border-vonix-blue-400 dark:border-vonix-orange-600`}
                           >
                             <AvatarImage src={depoiment.image} />
                             <AvatarFallback>
@@ -169,7 +169,7 @@ export function Cases() {
                               <h2 className="text-sm text-muted-foreground">
                                 {depoiment.role}
                               </h2>
-                              <h2 className="text-sm font-bold text-vonix-blue-600">
+                              <h2 className="text-sm font-bold text-vonix-blue-600 dark:text-vonix-orange-600">
                                 {depoiment.company}
                               </h2>
                             </div>

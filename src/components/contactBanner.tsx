@@ -2,8 +2,8 @@ import { useContext } from "react"
 
 import { IsMobileContext } from "@/context/isMobileContext"
 
+import { useTheme } from "../context/theme-provider"
 import { ContactButton } from "./contactButton"
-import { useTheme } from "./theme-provider"
 
 export function ContactBanner() {
   const { isMobile } = useContext(IsMobileContext)

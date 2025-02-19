@@ -1,18 +1,13 @@
-import { useContext } from "react"
-
-import { NavActiveContext } from "@/context/isNavActive"
-
-import logoDark from "../assets/logoDark.png"
-import logoLight from "../assets/logoLight.png"
-import logoPositive from "../assets/logoPositivo.png"
-import { useTheme } from "./theme-provider"
+import logoNegative from "../assets/logoDark.png"
+import logoPositive from "../assets/logoLight.png"
+import { useTheme } from "../context/theme-provider"
 
 export function LogoTheme() {
   const { theme } = useTheme()
-  const { navActive } = useContext(NavActiveContext)
+
   return (
     <img
-      src={navActive ? (theme === "dark" ? logoDark : logoLight) : logoPositive}
+      src={theme === "light" ? logoPositive : logoNegative}
       alt="logotipo vonix tecnologia"
       className="h-12 w-auto"
     />

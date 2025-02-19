@@ -9,11 +9,7 @@ export function SlideIndicator({ current, count }: SlideIndicatorProps) {
       {Array.from({ length: count }, (_, index) => (
         <span
           key={index}
-          className={`mx-1 inline-block ${
-            index === current - 1
-              ? "h-2 w-6 rounded-full bg-muted-foreground transition-all"
-              : "h-2 w-2 rounded-full bg-muted-foreground transition-all"
-          }`}
+          className={`mx-1 inline-block ${index === current - 1 ? "h-2 w-6 rounded-full bg-muted transition-all " : "h-2 w-2 rounded-full bg-muted transition-all "}`}
         ></span>
       ))}
     </div>

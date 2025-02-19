@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 
 import { SlideIndicator } from "@/components/slideIndicator"
-import { useTheme } from "@/components/theme-provider"
 import {
   Card,
   CardDescription,
@@ -17,6 +16,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { IsMobileContext } from "@/context/isMobileContext"
+import { useTheme } from "@/context/theme-provider"
 import { VonixFeaturesData } from "@/data/vonixFeatures"
 
 export function VonixFeatures() {

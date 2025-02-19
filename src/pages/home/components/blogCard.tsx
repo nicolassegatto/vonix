@@ -2,9 +2,9 @@ import { ArrowRight } from "lucide-react"
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 
-import { useTheme } from "@/components/theme-provider"
 import { Button } from "@/components/ui/button"
 import { IsMobileContext } from "@/context/isMobileContext"
+import { useTheme } from "@/context/theme-provider"
 import { BannerData } from "@/data/bannerData"
 
 export function BlogCard() {

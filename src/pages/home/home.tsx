@@ -2,9 +2,9 @@ import { useContext } from "react"
 import { Helmet } from "react-helmet-async"
 
 import bgLoop from "@/assets/bgLoop.mp4"
-import { useTheme } from "@/components/theme-provider"
 import { Button } from "@/components/ui/button"
 import { IsMobileContext } from "@/context/isMobileContext"
+import { useTheme } from "@/context/theme-provider"
 
 import { AboutVonixBanner } from "./components/aboutBanner"
 import { BlogCard } from "./components/blogCard"

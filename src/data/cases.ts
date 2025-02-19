@@ -146,7 +146,7 @@ export const dataCaseDepoiments = [
     description:
       "A Vonix Phone se destaca ao oferecer a capacidade de criar dashboards personalizados e acompanhar a operação em tempo real. Essa funcionalidade não apenas facilita a visualização dos indicadores, mas também possibilita um monitoramento ágil e preciso do gráfico. Um dos pontos fortes da Vonix é sua capacidade de extrair informações detalhadas, como chamadas perfiladas. Com esse relatório, podemos identificar o tipo de chamadas que entram na fila e ajustar as prioridades e skill conforme necessário.",
     image:
-      "https://media.licdn.com/dms/image/v2/C5603AQF0EVHGd3ZiJQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1602617501894?e=1736985600&v=beta&t=Dq5DN7Cu9iIvnaytMtljrmxN0rcMIoz-XjyPmcH6c3Q",
+      "https://media.licdn.com/dms/image/v2/D5603AQGcf0YReZPiLQ/profile-displayphoto-shrink_400_400/B56ZTsHT49HQAg-/0/1739128128034?e=1745452800&v=beta&t=BWWMAwVUj2SbP3mW3qSuwZvyHrnMzoeoTqLN71xKG-Y",
   },
   {
     name: "André Caetano Monteiro",
@@ -155,7 +155,7 @@ export const dataCaseDepoiments = [
     description:
       "As soluções da Vonix mudaram nosso jogo de produtividade. Há alguns anos, os serviços prestados por essa equipe têm feito a diferença no nosso negócio. Compromisso, qualidade e performance são características marcantes na Vonix e em toda sua equipe! Desejamos vida longa a essa parceria!",
     image:
-      "https://media.licdn.com/dms/image/v2/D4E03AQEZ5loRAW3jJg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718200728013?e=1736985600&v=beta&t=6Cwaggx6wXfYG5RUqHUPMDQnqIvxCyKQn3I_7Bvcf_0",
+      "https://media.licdn.com/dms/image/v2/D4E03AQEZ5loRAW3jJg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1718200728015?e=1745452800&v=beta&t=FZ8MRTFUot2tzPz6O_QB1r0DcusJXcZyw6pD7xj7_q4",
   },
   {
     name: "Lorraynne Araújo",
@@ -164,7 +164,7 @@ export const dataCaseDepoiments = [
     description:
       "Ficamos extremamente satisfeitos com os serviços da Vonix. Desde o primeiro contato, fomos recebidos com profissionalismo e uma abordagem personalizada que nos fez sentir valorizados como clientes. Recomendo fortemente a Vonix a qualquer empresa que busque uma gestão de telefonia de alto nível.",
     image:
-      "https://media.licdn.com/dms/image/v2/D4D35AQEvJOrTSGr8LQ/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1719435572936?e=1731981600&v=beta&t=zH116nnJdHBTBvQ9YnLIocUP4us1Jo_qj0urRpD_fwY",
+      "https://media.licdn.com/dms/image/v2/D5603AQG3oPwJmmqliw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1671633169102?e=1745452800&v=beta&t=5VXvqlNoNJ6btLztf-quT05tIuHv_Rh7sRx_-HID6DE",
   },
   {
     name: "Nicolas Segatto",
@@ -173,7 +173,7 @@ export const dataCaseDepoiments = [
     description:
       "Descobrir a Vonix nos levou a uma nova fase em nosso call center. Com sua plataforma intuitiva e robusta, desenvolver URAs se transformou em uma jornada ágil e completa. A habilidade de criar códigos em JavaScript e integrar tecnologias avançadas, como STT e TTS, nos permitiu oferecer um atendimento verdadeiramente personalizado.",
     image:
-      "https://media.licdn.com/dms/image/v2/D4E03AQFCuMaLDMdHEA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729919201494?e=1736985600&v=beta&t=HoXqoEVhorw9sizwqraH2MQLXKhnFq6fqYqbfoUXBhs",
+      "https://media.licdn.com/dms/image/v2/D4E03AQFCuMaLDMdHEA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1729919201471?e=1745452800&v=beta&t=Fwxnzw9MSZaHkITU-980Hun_psIQ7QIKyWiPG7Kg4Lw",
   },
   {
     name: "Fabiano Augusto",
@@ -182,6 +182,6 @@ export const dataCaseDepoiments = [
     description:
       "A Vonix se dedica a redefinir o contato com o cliente. Com uma infraestrutura de telefonia robusta e uma equipe sempre pronta para suportar nossos clientes, oferecemos uma plataforma que atende as necessidades de empresas que buscam excelência em comunicação.",
     image:
-      "https://media.licdn.com/dms/image/v2/D4D03AQFH7zhq155dZA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719590356270?e=1736985600&v=beta&t=FpQoE0Zijanh11xNfpFtc2fMvDWcWcd7dAjiVbR48p0",
+      "https://media.licdn.com/dms/image/v2/D4D03AQFH7zhq155dZA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1719590356241?e=1745452800&v=beta&t=Shp801xPB9muA1uheyU6m77Qf4DqZ-tZdEcFenIv2sQ",
   },
 ] as DepoimentsInterface[]

@@ -16,7 +16,6 @@ import {
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
-  const { menu } = pagesNavigate[0]
 
   return (
     <>
@@ -41,15 +40,7 @@ export function MobileMenu() {
                 </DrawerDescription>
               </DrawerHeader>
               <div className="mt-4 flex flex-col items-center gap-2">
-                <NavLink
-                  to="/vonix/"
-                  onClick={() => setIsOpen(false)}
-                  className="flex w-full items-center justify-center border-b p-2 font-quicksand text-muted-foreground hover:text-foreground data-[active=true]:text-foreground"
-                >
-                  <span className="font-bold first-letter:uppercase">Home</span>
-                </NavLink>
-
-                {menu.map(page => {
+                {pagesNavigate.map(page => {
                   return (
                     <NavLink
                       key={page.id}

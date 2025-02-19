@@ -1,6 +1,6 @@
 import logoDark from "../assets/logoNegativo.png"
 import logoLight from "../assets/logoPositivo.png"
-import { useTheme } from "./theme-provider"
+import { useTheme } from "../context/theme-provider"
 
 export function LogoFooterTheme() {
   const { theme } = useTheme()

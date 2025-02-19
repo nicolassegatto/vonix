@@ -1,6 +1,8 @@
+import { useMutation } from "@tanstack/react-query"
 import { useContext } from "react"
 import { useForm } from "react-hook-form"
 
+import { SendWhatsapp, SendWhatsappRequest } from "@/api/sendWhatsapp"
 import { IsMobileContext } from "@/context/isMobileContext"
 
 import contact from "../assets/contactPerson.png"
@@ -20,11 +22,40 @@ import {
 import { Textarea } from "./ui/textarea"
 
 export function Contact() {
-  const { register, handleSubmit } = useForm()
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors },
+    reset,
+  } = useForm()
+
   const { isMobile } = useContext(IsMobileContext)
 
+  const mutation = useMutation({
+    mutationFn: (data: SendWhatsappRequest) => SendWhatsapp(data),
+    onSuccess: response => {
+      console.log("Mensagem enviada com sucesso!", response)
+      alert("Mensagem enviada com sucesso!")
+
+      reset()
+    },
+    onError: error => {
+      console.error("Erro ao enviar mensagem:", error)
+      alert("Erro ao enviar a mensagem. Tente novamente.")
+    },
+  })
+
   function handleContactRequest(data: any) {
-    console.log(data)
+    console.log("Form data:", data)
+    console.log("Form errors:", errors)
+
+    const payload: SendWhatsappRequest = {
+      message: data.message,
+      phoneNumber: data.contactPhone,
+    }
+
+    mutation.mutate(payload)
   }
 
   return (
@@ -58,7 +89,11 @@ export function Contact() {
       <div className="rounded-3xl border bg-slate-100 p-6 dark:bg-slate-900">
         <form
           className={`flex flex-col gap-2 `}
-          onSubmit={handleSubmit(handleContactRequest)}
+          onSubmit={event => {
+            event.preventDefault()
+            console.log("Submitting form...")
+            handleSubmit(handleContactRequest)()
+          }}
         >
           <div>
             <Label
@@ -74,6 +109,7 @@ export function Contact() {
               {...register("email")}
             />
           </div>
+
           <div>
             <Label
               htmlFor="contactPhone"
@@ -96,9 +132,12 @@ export function Contact() {
             >
               Company size *
             </Label>
-            <Select>
+            <Select onValueChange={value => setValue("companySize", value)}>
               <SelectTrigger className="rounded-full pl-4 text-xs text-muted-foreground">
-                <SelectValue placeholder="Por favor escolha" />
+                <SelectValue
+                  id="companySize"
+                  placeholder="Por favor escolha"
+                />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
@@ -129,11 +168,13 @@ export function Contact() {
 
           <Button
             type="submit"
-            variant={"default"}
+            variant="default"
+            disabled={mutation.isPending}
             className="rounded-full bg-vonix-blue-400 font-bold dark:bg-vonix-orange-600"
           >
-            Enviar
+            {mutation.isPending ? "Enviando..." : "Enviar"}
           </Button>
+
           <ScrollArea className={`h-12`}>
             <p className="text-xs text-muted-foreground">
               Os dados pessoais coletados neste formulário têm por finalidade o
