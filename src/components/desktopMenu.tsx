@@ -19,7 +19,7 @@ export function DesktopMenu() {
                 <NavLink
                   key={page.id}
                   to={page.to || "/vonix"}
-                  className="flex items-center text-muted-foreground  hover:text-foreground data-[active=true]:text-vonix-blue-400 dark:text-foreground data-[active=true]:dark:text-vonix-orange-600"
+                  className="flex items-center text-muted-foreground  hover:text-muted dark:hover:text-muted data-[active=true]:text-vonix-blue-400 dark:text-foreground data-[active=true]:dark:text-vonix-orange-600"
                 >
                   <span className="font-bold first-letter:uppercase">
                     {page.name}

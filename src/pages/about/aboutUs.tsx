@@ -10,19 +10,19 @@ export function AboutUs() {
   return (
     <div className="mb-24 flex w-full flex-col gap-24">
       <Helmet title="Sobre nós" />
-      <div className="-mt-24 bg-vonix-blue-400 pt-32 shadow-inner-bottom dark:bg-vonix-orange-600">
+      <div className={`-mt-24 bg-vonix-blue-400 ${!isMobile && 'pt-32'} shadow-inner-bottom dark:bg-vonix-orange-600`}>
         <div
           className={`m-auto flex flex-col gap-6 ${isMobile ? "px-8" : "px-6"} lg:max-w-screen-lg xl:max-w-screen-xl`}
         >
           <div className="flex w-full flex-col justify-center gap-2 py-52 text-background">
             <p className="font-semibold opacity-40">Vonix</p>
             <h1
-              className={`text-center ${isMobile ? "text-6xl" : "text-8xl"} font-bold`}
+              className={`${isMobile ? "text-6xl" : "text-8xl"} font-bold`}
             >
               Redefinindo o Contato com o Cliente.
             </h1>
             <p
-              className={`text-center ${isMobile ? "text-xl" : "text-2xl"} font-semibold opacity-65`}
+              className={`${isMobile ? "text-xl" : "text-2xl"} font-semibold opacity-65`}
             >
               Potencializamos a gestão do seu contact center com soluções
               inovadoras e personalizadas.

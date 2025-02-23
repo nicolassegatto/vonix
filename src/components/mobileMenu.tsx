@@ -13,22 +13,26 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "./ui/drawer"
+import { ModeToggle } from "./mode-toggle"
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <>
-      <div className="flex items-center gap-2 outline-none">
+      <div className="flex items-center outline-none">
         <Drawer
           direction="left"
           open={isOpen}
           onOpenChange={setIsOpen}
         >
-          <DrawerTrigger className="flex items-center gap-2 outline-none">
+          <DrawerTrigger className="flex items-center outline-none">
+
             <EllipsisVertical />
             <LogoTheme />
+
           </DrawerTrigger>
+
           <DrawerContent className="outline-none">
             <div className="mx-auto w-full max-w-sm">
               <DrawerHeader>
@@ -57,7 +61,7 @@ export function MobileMenu() {
               </div>
             </div>
             <DrawerFooter className="mb-4 text-center text-sm text-muted-foreground">
-              {`© Vonix Técnologia ${new Date().getFullYear()}`}
+              <div className="flex gap-4 justify-center items-center">{`© Vonix Técnologia ${new Date().getFullYear()}`}<ModeToggle /></div>
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
